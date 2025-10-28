@@ -5,8 +5,8 @@ import (
 	"path"
 	"strings"
 
-	apiSpec "github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/util/stringx"
+	apiSpec "github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 	"github.com/go-openapi/spec"
 )
 

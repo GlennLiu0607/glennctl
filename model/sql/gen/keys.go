@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/glenn/glennctl/model/sql/parser"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/model/sql/parser"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 // Key describes cache key

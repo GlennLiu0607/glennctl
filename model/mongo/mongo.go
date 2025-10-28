@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/model/mongo/generate"
-	file "github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/model/mongo/generate"
+	file "github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/spf13/cobra"
 )
 

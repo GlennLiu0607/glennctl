@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/rpc/execx"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/rpc/execx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/stretchr/testify/assert"
 	"github.com/zeromicro/go-zero/core/stringx"
 )

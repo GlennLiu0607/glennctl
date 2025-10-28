@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"path/filepath"
 
-	conf "github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/rpc/parser"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/format"
-	"github.com/glenn/glennctl/util/pathx"
+	conf "github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/rpc/parser"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 //go:embed svc.tpl

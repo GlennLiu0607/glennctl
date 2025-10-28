@@ -1,6 +1,6 @@
 package swagger
 
-import "github.com/glenn/glennctl/api/spec"
+import "github.com/GlennLiu0607/glennctl/api/spec"
 
 func fillAllStructs(api *spec.ApiSpec) {
 	var (

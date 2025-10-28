@@ -4,7 +4,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/glenn/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/console"
 )
 
 var goKeyword = map[string]string{

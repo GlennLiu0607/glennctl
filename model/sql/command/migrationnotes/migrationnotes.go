@@ -1,8 +1,8 @@
 package migrationnotes
 
 import (
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/util/format"
 )
 
 // BeforeCommands run before command run to show some migration notes

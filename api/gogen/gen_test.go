@@ -13,10 +13,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/api/parser"
-	"github.com/glenn/glennctl/pkg/env"
-	"github.com/glenn/glennctl/rpc/execx"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/parser"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
+	"github.com/GlennLiu0607/glennctl/rpc/execx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/stretchr/testify/assert"
 )
 

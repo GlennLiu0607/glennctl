@@ -1,18 +1,18 @@
 package gogen
 
 import (
-    "bytes"
-    "fmt"
-    "io"
-    "path/filepath"
-    "strings"
-    "text/template"
+	"bytes"
+	"fmt"
+	"io"
+	"path/filepath"
+	"strings"
+	"text/template"
 
-    "github.com/glenn/glennctl/api/spec"
-    "github.com/glenn/glennctl/api/util"
-    "github.com/glenn/glennctl/pkg/golang"
-    "github.com/glenn/glennctl/util/pathx"
-    "github.com/zeromicro/go-zero/core/collection"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/pkg/golang"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/zeromicro/go-zero/core/collection"
 )
 
 type fileGenConfig struct {
@@ -27,14 +27,14 @@ type fileGenConfig struct {
 }
 
 func genFile(c fileGenConfig) error {
-    fp, created, err := util.MaybeCreateFile(c.dir, c.subdir, c.filename)
-    if err != nil {
-        return err
-    }
-    if !created {
-        return nil
-    }
-    defer fp.Close()
+	fp, created, err := util.MaybeCreateFile(c.dir, c.subdir, c.filename)
+	if err != nil {
+		return err
+	}
+	if !created {
+		return nil
+	}
+	defer fp.Close()
 
 	var text string
 	if len(c.category) == 0 || len(c.templateFile) == 0 {
@@ -46,34 +46,34 @@ func genFile(c fileGenConfig) error {
 		}
 	}
 
-    t := template.Must(template.New(c.templateName).Parse(text))
-    buffer := new(bytes.Buffer)
-    // enrich header variables for templates
-    data := c.data
-    if m, ok := data.(map[string]any); ok {
-        now := golang.NowString()
-        if _, exist := m["Date"]; !exist {
-            m["Date"] = now
-        }
-        if _, exist := m["LastEditTime"]; !exist {
-            m["LastEditTime"] = now
-        }
-        if _, exist := m["LastEditors"]; !exist {
-            m["LastEditors"] = "glennctl"
-        }
-        fullPath := c.dir
-        if len(c.subdir) > 0 {
-            fullPath = filepath.Join(fullPath, c.subdir)
-        }
-        if _, exist := m["FilePath"]; !exist {
-            m["FilePath"] = filepath.Join(fullPath, c.filename)
-        }
-        data = m
-    }
-    err = t.Execute(buffer, data)
-    if err != nil {
-        return err
-    }
+	t := template.Must(template.New(c.templateName).Parse(text))
+	buffer := new(bytes.Buffer)
+	// enrich header variables for templates
+	data := c.data
+	if m, ok := data.(map[string]any); ok {
+		now := golang.NowString()
+		if _, exist := m["Date"]; !exist {
+			m["Date"] = now
+		}
+		if _, exist := m["LastEditTime"]; !exist {
+			m["LastEditTime"] = now
+		}
+		if _, exist := m["LastEditors"]; !exist {
+			m["LastEditors"] = "glennctl"
+		}
+		fullPath := c.dir
+		if len(c.subdir) > 0 {
+			fullPath = filepath.Join(fullPath, c.subdir)
+		}
+		if _, exist := m["FilePath"]; !exist {
+			m["FilePath"] = filepath.Join(fullPath, c.filename)
+		}
+		data = m
+	}
+	err = t.Execute(buffer, data)
+	if err != nil {
+		return err
+	}
 
 	code := golang.FormatCode(buffer.String())
 	_, err = fp.WriteString(code)

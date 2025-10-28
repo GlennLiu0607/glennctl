@@ -6,7 +6,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 const (

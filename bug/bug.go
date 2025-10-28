@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/glenn/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/internal/version"
 	"github.com/spf13/cobra"
 )
 

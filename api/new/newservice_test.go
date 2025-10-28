@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/glenn/glennctl/api/gogen"
-	"github.com/glenn/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/api/gogen"
+	"github.com/GlennLiu0607/glennctl/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

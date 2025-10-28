@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/plugin"
+	"github.com/GlennLiu0607/glennctl/plugin"
 )
 
 func main() {

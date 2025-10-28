@@ -5,7 +5,7 @@ import (
 	"path"
 	"sort"
 
-	"github.com/glenn/glennctl/api/parser/g4/gen/api"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/gen/api"
 )
 
 const (

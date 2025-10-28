@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	mocksql "github.com/glenn/glennctl/model/sql/test"
+	mocksql "github.com/GlennLiu0607/glennctl/model/sql/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/zeromicro/go-zero/core/stores/cache"
 	"github.com/zeromicro/go-zero/core/stores/redis"

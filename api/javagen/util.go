@@ -6,9 +6,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 func writeProperty(writer io.Writer, member spec.Member, indent int) error {

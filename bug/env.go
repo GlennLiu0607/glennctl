@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/glenn/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/internal/version"
 )
 
 type env map[string]string

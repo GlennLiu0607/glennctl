@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 //go:embed request.ts

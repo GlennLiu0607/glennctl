@@ -6,11 +6,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/glenn/glennctl/model/sql/converter"
-	"github.com/glenn/glennctl/model/sql/model"
-	"github.com/glenn/glennctl/model/sql/util"
-	"github.com/glenn/glennctl/util/console"
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/model/sql/converter"
+	"github.com/GlennLiu0607/glennctl/model/sql/model"
+	"github.com/GlennLiu0607/glennctl/model/sql/util"
+	"github.com/GlennLiu0607/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 	"github.com/zeromicro/ddl-parser/parser"
 	"github.com/zeromicro/go-zero/core/collection"
 )

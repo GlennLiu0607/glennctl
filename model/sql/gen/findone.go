@@ -1,10 +1,10 @@
 package gen
 
 import (
-	"github.com/glenn/glennctl/model/sql/template"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/model/sql/template"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 func genFindOne(table Table, withCache, postgreSql bool) (string, string, error) {

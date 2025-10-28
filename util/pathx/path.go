@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/vars"
 )
 
 const (

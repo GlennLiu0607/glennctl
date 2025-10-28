@@ -3,10 +3,10 @@ package gogen
 import (
 	_ "embed"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/internal/version"
-	"github.com/glenn/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/util/format"
 )
 
 //go:embed svc_test.tpl

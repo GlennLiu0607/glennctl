@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/glenn/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/api/util"
 	"github.com/iancoleman/strcase"
 )
 

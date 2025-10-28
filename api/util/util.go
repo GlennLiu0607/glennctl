@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

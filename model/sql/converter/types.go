@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/pkg/env"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
 	"github.com/zeromicro/ddl-parser/parser"
 )
 

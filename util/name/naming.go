@@ -5,7 +5,7 @@ package name
 import (
 	"strings"
 
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 // NamingStyle the type of string

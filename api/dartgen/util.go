@@ -7,8 +7,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/util"
 )
 
 const (

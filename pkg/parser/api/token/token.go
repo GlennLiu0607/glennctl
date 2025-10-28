@@ -3,8 +3,8 @@ package token
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/pkg/parser/api/placeholder"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/placeholder"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 const (

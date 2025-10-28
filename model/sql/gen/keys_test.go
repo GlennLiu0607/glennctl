@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/glenn/glennctl/model/sql/parser"
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/model/sql/parser"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 	"github.com/stretchr/testify/assert"
 )
 

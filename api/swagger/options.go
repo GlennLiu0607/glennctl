@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 func rangeValueFromOptions(options []string) (minimum *float64, maximum *float64, exclusiveMinimum bool, exclusiveMaximum bool) {

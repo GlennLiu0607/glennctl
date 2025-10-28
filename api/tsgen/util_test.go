@@ -3,7 +3,7 @@ package tsgen
 import (
 	"testing"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 	"github.com/stretchr/testify/assert"
 )
 

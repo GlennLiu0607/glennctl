@@ -1,6 +1,6 @@
 package ast
 
-import "github.com/glenn/glennctl/api/parser/g4/gen/api"
+import "github.com/GlennLiu0607/glennctl/api/parser/g4/gen/api"
 
 // SyntaxExpr describes syntax for api
 type SyntaxExpr struct {

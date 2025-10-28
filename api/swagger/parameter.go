@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	apiSpec "github.com/glenn/glennctl/api/spec"
+	apiSpec "github.com/GlennLiu0607/glennctl/api/spec"
 	"github.com/go-openapi/spec"
 )
 

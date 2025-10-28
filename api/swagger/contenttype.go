@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 )
 
 func consumesFromTypeOrDef(ctx Context, method string, tp spec.Type) []string {

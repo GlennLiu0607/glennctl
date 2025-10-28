@@ -3,7 +3,7 @@ package swagger
 import (
 	"strconv"
 
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util"
 	"google.golang.org/grpc/metadata"
 )
 

@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/glenn/glennctl/pkg/goctl"
-	"github.com/glenn/glennctl/pkg/golang"
-	"github.com/glenn/glennctl/rpc/execx"
-	"github.com/glenn/glennctl/util/env"
+	"github.com/GlennLiu0607/glennctl/pkg/goctl"
+	"github.com/GlennLiu0607/glennctl/pkg/golang"
+	"github.com/GlennLiu0607/glennctl/rpc/execx"
+	"github.com/GlennLiu0607/glennctl/util/env"
 )
 
 const (

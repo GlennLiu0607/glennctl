@@ -3,7 +3,7 @@ package cobrax
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/internal/flags"
+	"github.com/GlennLiu0607/glennctl/internal/flags"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

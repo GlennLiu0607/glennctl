@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/glenn/glennctl/api/parser/g4/ast"
-	"github.com/glenn/glennctl/api/parser/g4/gen/api"
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/pkg/env"
-	apiParser "github.com/glenn/glennctl/pkg/parser/api/parser"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/ast"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/gen/api"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
+	apiParser "github.com/GlennLiu0607/glennctl/pkg/parser/api/parser"
 )
 
 type parser struct {

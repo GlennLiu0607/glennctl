@@ -1,6 +1,6 @@
 package util
 
-import "github.com/glenn/glennctl/internal/version"
+import "github.com/GlennLiu0607/glennctl/internal/version"
 
 const (
 	// DoNotEditHead added to the beginning of a file to prompt the user not to edit

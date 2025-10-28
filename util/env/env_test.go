@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/vars"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 )
 
 const apiTemplate = `import 'api.dart';

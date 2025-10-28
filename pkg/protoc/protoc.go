@@ -8,12 +8,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/glenn/glennctl/pkg/downloader"
-	"github.com/glenn/glennctl/pkg/goctl"
-	"github.com/glenn/glennctl/rpc/execx"
-	"github.com/glenn/glennctl/util/env"
-	"github.com/glenn/glennctl/util/zipx"
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/pkg/downloader"
+	"github.com/GlennLiu0607/glennctl/pkg/goctl"
+	"github.com/GlennLiu0607/glennctl/rpc/execx"
+	"github.com/GlennLiu0607/glennctl/util/env"
+	"github.com/GlennLiu0607/glennctl/util/zipx"
+	"github.com/GlennLiu0607/glennctl/vars"
 )
 
 var url = map[string]string{

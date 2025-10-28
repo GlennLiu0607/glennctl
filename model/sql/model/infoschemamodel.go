@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/glenn/glennctl/model/sql/util"
+	"github.com/GlennLiu0607/glennctl/model/sql/util"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 )
 

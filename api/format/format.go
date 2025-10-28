@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/api/parser"
-	"github.com/glenn/glennctl/api/util"
-	"github.com/glenn/glennctl/pkg/env"
-	apiF "github.com/glenn/glennctl/pkg/parser/api/format"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/parser"
+	"github.com/GlennLiu0607/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
+	apiF "github.com/GlennLiu0607/glennctl/pkg/parser/api/format"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/errorx"
 )

@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/glenn/glennctl/model/sql/model"
-	"github.com/glenn/glennctl/model/sql/util"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/model/sql/model"
+	"github.com/GlennLiu0607/glennctl/model/sql/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/stretchr/testify/assert"
 )
 

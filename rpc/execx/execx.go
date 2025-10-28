@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/vars"
 )
 
 // RunFunc defines a function type of Run function

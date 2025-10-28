@@ -7,9 +7,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/glenn/glennctl/api/spec"
-	apiutil "github.com/glenn/glennctl/api/util"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	apiutil "github.com/GlennLiu0607/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/util"
 	"github.com/zeromicro/go-zero/core/stringx"
 )
 

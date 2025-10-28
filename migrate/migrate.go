@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/glenn/glennctl/util/console"
-	"github.com/glenn/glennctl/util/ctx"
+	"github.com/GlennLiu0607/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/ctx"
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
 )

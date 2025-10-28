@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	apiSpec "github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/internal/version"
+	apiSpec "github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/internal/version"
 	"github.com/go-openapi/spec"
 )
 

@@ -3,9 +3,9 @@ package gen
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/model/sql/template"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/model/sql/template"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 func genNew(table Table, withCache, postgreSql bool) (string, error) {

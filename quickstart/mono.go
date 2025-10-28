@@ -1,18 +1,18 @@
 package quickstart
 
 import (
-    _ "embed"
-    "fmt"
-    "os"
-    "path/filepath"
-    "strings"
-    "time"
+	_ "embed"
+	"fmt"
+	"os"
+	"path/filepath"
+	"strings"
+	"time"
 
-    "github.com/glenn/glennctl/api/gogen"
-    "github.com/glenn/glennctl/pkg/golang"
-    "github.com/glenn/glennctl/util"
-    "github.com/glenn/glennctl/util/pathx"
-    "github.com/zeromicro/go-zero/core/logx"
+	"github.com/GlennLiu0607/glennctl/api/gogen"
+	"github.com/GlennLiu0607/glennctl/pkg/golang"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/zeromicro/go-zero/core/logx"
 )
 
 var (
@@ -30,21 +30,21 @@ var (
 )
 
 func initAPIFlags() error {
-    rpcWorkDir = filepath.Join(projectDir, "rpc")
-    apiWorkDir = filepath.Join(projectDir, "api")
-    if err := pathx.MkdirIfNotExist(apiWorkDir); err != nil {
-        return err
-    }
+	rpcWorkDir = filepath.Join(projectDir, "rpc")
+	apiWorkDir = filepath.Join(projectDir, "api")
+	if err := pathx.MkdirIfNotExist(apiWorkDir); err != nil {
+		return err
+	}
 
-    apiFilename := filepath.Join(apiWorkDir, "greet.api")
-    // prepend dynamic header to embedded api content
-    now := time.Now().Format("2006-01-02 15:04:05")
-    winPath := strings.ReplaceAll(filepath.Clean(apiFilename), "/", "\\")
-    header := fmt.Sprintf("/*\n * @Author: GlennLiu <glennliu0607@gmail.com>\n * @Date: %s\n * @LastEditors: Glenn 18322653727@163.com\n * @LastEditTime: %s\n * @FilePath: %s\n * @Description:\n *\n * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.\n */\n\n", now, now, winPath)
-    apiBytes := []byte(header + apiContent)
-    if err := os.WriteFile(apiFilename, apiBytes, 0o666); err != nil {
-        return err
-    }
+	apiFilename := filepath.Join(apiWorkDir, "greet.api")
+	// prepend dynamic header to embedded api content
+	now := time.Now().Format("2006-01-02 15:04:05")
+	winPath := strings.ReplaceAll(filepath.Clean(apiFilename), "/", "\\")
+	header := fmt.Sprintf("/*\n * @Author: GlennLiu <glennliu0607@gmail.com>\n * @Date: %s\n * @LastEditors: Glenn 18322653727@163.com\n * @LastEditTime: %s\n * @FilePath: %s\n * @Description:\n *\n * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.\n */\n\n", now, now, winPath)
+	apiBytes := []byte(header + apiContent)
+	if err := os.WriteFile(apiFilename, apiBytes, 0o666); err != nil {
+		return err
+	}
 
 	gogen.VarStringDir = apiWorkDir
 	gogen.VarStringAPI = apiFilename

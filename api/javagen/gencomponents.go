@@ -22,11 +22,11 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/glenn/glennctl/api/spec"
-	apiutil "github.com/glenn/glennctl/api/util"
-	"github.com/glenn/glennctl/internal/version"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	apiutil "github.com/GlennLiu0607/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 const (

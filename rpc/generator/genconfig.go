@@ -1,14 +1,14 @@
 package generator
 
 import (
-    _ "embed"
-    "path/filepath"
+	_ "embed"
+	"path/filepath"
 
-    conf "github.com/glenn/glennctl/config"
-    "github.com/glenn/glennctl/rpc/parser"
-    "github.com/glenn/glennctl/util"
-    "github.com/glenn/glennctl/util/format"
-    "github.com/glenn/glennctl/util/pathx"
+	conf "github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/rpc/parser"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 //go:embed config.tpl
@@ -30,10 +30,10 @@ func (g *Generator) GenConfig(ctx DirContext, _ parser.Proto, cfg *conf.Config) 
 		return nil
 	}
 
-    text, err := pathx.LoadTemplate(category, configTemplateFileFile, configTemplate)
-    if err != nil {
-        return err
-    }
+	text, err := pathx.LoadTemplate(category, configTemplateFileFile, configTemplate)
+	if err != nil {
+		return err
+	}
 
-    return util.With("config").GoFmt(true).Parse(text).SaveTo(map[string]any{}, fileName, false)
+	return util.With("config").GoFmt(true).Parse(text).SaveTo(map[string]any{}, fileName, false)
 }

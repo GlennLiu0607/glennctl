@@ -1,6 +1,6 @@
 package tpl
 
-import "github.com/glenn/glennctl/internal/cobrax"
+import "github.com/GlennLiu0607/glennctl/internal/cobrax"
 
 var (
 	varStringHome     string

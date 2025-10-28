@@ -1,18 +1,18 @@
 package apigen
 
 import (
-    _ "embed"
-    "errors"
-    "fmt"
-    "html/template"
-    "path/filepath"
-    "strings"
-    "time"
+	_ "embed"
+	"errors"
+	"fmt"
+	"html/template"
+	"path/filepath"
+	"strings"
+	"time"
 
-    "github.com/glenn/glennctl/util"
-    "github.com/glenn/glennctl/util/pathx"
-    "github.com/gookit/color"
-    "github.com/spf13/cobra"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/gookit/color"
+	"github.com/spf13/cobra"
 )
 
 //go:embed api.tpl
@@ -65,20 +65,20 @@ func CreateApiTemplate(_ *cobra.Command, _ []string) error {
 		baseName = baseName[:len(baseName)-3]
 	}
 
-    t := template.Must(template.New("etcTemplate").Parse(text))
-    // dynamic header fields
-    now := time.Now().Format("2006-01-02 15:04:05")
-    winPath := strings.ReplaceAll(filepath.Clean(apiFile), "/", "\\")
-    if err := t.Execute(fp, map[string]string{
-        "gitUser":      getGitName(),
-        "gitEmail":     getGitEmail(),
-        "serviceName":  baseName + "-api",
-        "Date":         now,
-        "LastEditTime": now,
-        "FilePath":     winPath,
-    }); err != nil {
-        return err
-    }
+	t := template.Must(template.New("etcTemplate").Parse(text))
+	// dynamic header fields
+	now := time.Now().Format("2006-01-02 15:04:05")
+	winPath := strings.ReplaceAll(filepath.Clean(apiFile), "/", "\\")
+	if err := t.Execute(fp, map[string]string{
+		"gitUser":      getGitName(),
+		"gitEmail":     getGitEmail(),
+		"serviceName":  baseName + "-api",
+		"Date":         now,
+		"LastEditTime": now,
+		"FilePath":     winPath,
+	}); err != nil {
+		return err
+	}
 
 	fmt.Println(color.Green.Render("Done."))
 	return nil

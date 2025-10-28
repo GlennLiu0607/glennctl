@@ -3,10 +3,10 @@ package generator
 import (
 	"path/filepath"
 
-	"github.com/glenn/glennctl/rpc/parser"
-	"github.com/glenn/glennctl/util/console"
-	"github.com/glenn/glennctl/util/ctx"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/rpc/parser"
+	"github.com/GlennLiu0607/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/ctx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 type ZRpcContext struct {

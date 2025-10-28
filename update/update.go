@@ -6,8 +6,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/glenn/glennctl/update/config"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/update/config"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/hash"
 	"github.com/zeromicro/go-zero/core/logx"

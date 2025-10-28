@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/glenn/glennctl/pkg/parser/api/token"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 // Node represents a node in the AST.

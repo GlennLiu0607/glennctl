@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/internal/version"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/pkg/parser/api/token"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 const (

@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/glenn/glennctl/api/parser/g4/gen/api"
-	"github.com/glenn/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/gen/api"
+	"github.com/GlennLiu0607/glennctl/util/console"
 	"github.com/zeromicro/antlr"
 )
 

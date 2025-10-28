@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/glenn/glennctl/util/env"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/env"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 func CloneIntoGitHome(url, branch string) (dir string, err error) {

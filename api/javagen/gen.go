@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/glenn/glennctl/api/parser"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/api/parser"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"

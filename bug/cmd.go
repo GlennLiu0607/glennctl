@@ -1,7 +1,7 @@
 package bug
 
 import (
-	"github.com/glenn/glennctl/internal/cobrax"
+	"github.com/GlennLiu0607/glennctl/internal/cobrax"
 	"github.com/spf13/cobra"
 )
 

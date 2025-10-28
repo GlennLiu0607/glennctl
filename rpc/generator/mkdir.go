@@ -4,12 +4,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	conf "github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/rpc/parser"
-	"github.com/glenn/glennctl/util/ctx"
-	"github.com/glenn/glennctl/util/format"
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/util/stringx"
+	conf "github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/rpc/parser"
+	"github.com/GlennLiu0607/glennctl/util/ctx"
+	"github.com/GlennLiu0607/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 const (

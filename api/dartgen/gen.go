@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/glenn/glennctl/api/parser"
+	"github.com/GlennLiu0607/glennctl/api/parser"
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 )

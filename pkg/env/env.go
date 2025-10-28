@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/internal/version"
-	sortedmap "github.com/glenn/glennctl/pkg/collection"
-	"github.com/glenn/glennctl/pkg/protoc"
-	"github.com/glenn/glennctl/pkg/protocgengo"
-	"github.com/glenn/glennctl/pkg/protocgengogrpc"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	sortedmap "github.com/GlennLiu0607/glennctl/pkg/collection"
+	"github.com/GlennLiu0607/glennctl/pkg/protoc"
+	"github.com/GlennLiu0607/glennctl/pkg/protocgengo"
+	"github.com/GlennLiu0607/glennctl/pkg/protocgengogrpc"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 var goctlEnv *sortedmap.SortedMap

@@ -1,6 +1,6 @@
 package ast
 
-import "github.com/glenn/glennctl/pkg/parser/api/token"
+import "github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
 
 // SyntaxStmt represents a syntax statement.
 type SyntaxStmt struct {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/glenn/glennctl/cmd"
+	"github.com/GlennLiu0607/glennctl/cmd"
 	"github.com/zeromicro/go-zero/core/load"
 	"github.com/zeromicro/go-zero/core/logx"
 )

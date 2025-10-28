@@ -1,14 +1,14 @@
 package generator
 
 import (
-    _ "embed"
-    "path/filepath"
-    "strings"
-    "time"
+	_ "embed"
+	"path/filepath"
+	"strings"
+	"time"
 
-    "github.com/glenn/glennctl/util"
-    "github.com/glenn/glennctl/util/pathx"
-    "github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 //go:embed rpc.tpl
@@ -29,14 +29,14 @@ func ProtoTmpl(out string) error {
 		return err
 	}
 
-    now := time.Now().Format("2006-01-02 15:04:05")
-    winPath := strings.ReplaceAll(filepath.Clean(out), "/", "\\")
-    err = util.With("t").Parse(text).SaveTo(map[string]string{
-        "package":      serviceName.Untitle(),
-        "serviceName":  serviceName.Title(),
-        "Date":         now,
-        "LastEditTime": now,
-        "FilePath":     winPath,
-    }, out, false)
-    return err
+	now := time.Now().Format("2006-01-02 15:04:05")
+	winPath := strings.ReplaceAll(filepath.Clean(out), "/", "\\")
+	err = util.With("t").Parse(text).SaveTo(map[string]string{
+		"package":      serviceName.Untitle(),
+		"serviceName":  serviceName.Title(),
+		"Date":         now,
+		"LastEditTime": now,
+		"FilePath":     winPath,
+	}, out, false)
+	return err
 }

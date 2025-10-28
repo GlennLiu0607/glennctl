@@ -5,7 +5,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/vars"
 )
 
 func goStart(dir string) {

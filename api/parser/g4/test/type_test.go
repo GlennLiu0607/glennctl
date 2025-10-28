@@ -3,8 +3,8 @@ package test
 import (
 	"testing"
 
-	"github.com/glenn/glennctl/api/parser/g4/ast"
-	"github.com/glenn/glennctl/api/parser/g4/gen/api"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/ast"
+	"github.com/GlennLiu0607/glennctl/api/parser/g4/gen/api"
 	"github.com/stretchr/testify/assert"
 )
 

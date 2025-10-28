@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/glenn/glennctl/pkg/golang"
-	"github.com/glenn/glennctl/util/console"
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/vars"
+	"github.com/GlennLiu0607/glennctl/pkg/golang"
+	"github.com/GlennLiu0607/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/vars"
 )
 
 func Install(cacheDir, name string, installFn func(dest string) (string, error)) (string, error) {

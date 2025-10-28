@@ -3,9 +3,9 @@ package generator
 import (
 	"log"
 
-	conf "github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/env"
-	"github.com/glenn/glennctl/util/console"
+	conf "github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/env"
+	"github.com/GlennLiu0607/glennctl/util/console"
 )
 
 // Generator defines the environment needs of rpc service generation

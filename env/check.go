@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/glenn/glennctl/pkg/env"
-	"github.com/glenn/glennctl/pkg/protoc"
-	"github.com/glenn/glennctl/pkg/protocgengo"
-	"github.com/glenn/glennctl/pkg/protocgengogrpc"
-	"github.com/glenn/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
+	"github.com/GlennLiu0607/glennctl/pkg/protoc"
+	"github.com/GlennLiu0607/glennctl/pkg/protocgengo"
+	"github.com/GlennLiu0607/glennctl/pkg/protocgengogrpc"
+	"github.com/GlennLiu0607/glennctl/util/console"
 	"github.com/spf13/cobra"
 )
 

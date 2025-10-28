@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/glenn/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/console"
 	"github.com/zeromicro/go-zero/core/syncx"
 )
 

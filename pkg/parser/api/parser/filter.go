@@ -3,8 +3,8 @@ package parser
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/pkg/parser/api/ast"
-	"github.com/glenn/glennctl/pkg/parser/api/token"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/ast"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
 )
 
 type filterBuilder struct {

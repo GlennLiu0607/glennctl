@@ -4,8 +4,8 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/glenn/glennctl/internal/version"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 // Customized defines a template for customized in model

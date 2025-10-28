@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 	"github.com/iancoleman/strcase"
 )
 

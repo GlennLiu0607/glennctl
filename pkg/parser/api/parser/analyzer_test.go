@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/pkg/parser/api/assertx"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/assertx"
 	"github.com/stretchr/testify/assert"
 )
 

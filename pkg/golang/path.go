@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/util/ctx"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/ctx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 func GetParentPackage(dir string) (string, string, error) {

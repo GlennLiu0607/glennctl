@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/glenn/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/internal/version"
 	"github.com/gookit/color"
 )
 

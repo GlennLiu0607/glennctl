@@ -7,9 +7,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	apiutil "github.com/glenn/glennctl/api/util"
-	"github.com/glenn/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	apiutil "github.com/GlennLiu0607/glennctl/api/util"
+	"github.com/GlennLiu0607/glennctl/util"
 )
 
 const (

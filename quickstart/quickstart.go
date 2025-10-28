@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/glenn/glennctl/util/console"
-	"github.com/glenn/glennctl/util/ctx"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/console"
+	"github.com/GlennLiu0607/glennctl/util/ctx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 )

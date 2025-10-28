@@ -1,9 +1,9 @@
 package model
 
 import (
-	"github.com/glenn/glennctl/internal/cobrax"
-	"github.com/glenn/glennctl/model/mongo"
-	"github.com/glenn/glennctl/model/sql/command"
+	"github.com/GlennLiu0607/glennctl/internal/cobrax"
+	"github.com/GlennLiu0607/glennctl/model/mongo"
+	"github.com/GlennLiu0607/glennctl/model/sql/command"
 )
 
 var (

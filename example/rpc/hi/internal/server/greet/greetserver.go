@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	greetlogic "github.com/glenn/glennctl/example/rpc/hi/internal/logic/greet"
-	"github.com/glenn/glennctl/example/rpc/hi/internal/svc"
-	"github.com/glenn/glennctl/example/rpc/hi/pb/hi"
+	greetlogic "github.com/GlennLiu0607/glennctl/example/rpc/hi/internal/logic/greet"
+	"github.com/GlennLiu0607/glennctl/example/rpc/hi/internal/svc"
+	"github.com/GlennLiu0607/glennctl/example/rpc/hi/pb/hi"
 )
 
 type GreetServer struct {

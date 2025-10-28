@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 )
 
 func Test_formatDuration(t *testing.T) {

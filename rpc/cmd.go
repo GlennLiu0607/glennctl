@@ -1,9 +1,9 @@
 package rpc
 
 import (
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/internal/cobrax"
-	"github.com/glenn/glennctl/rpc/cli"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/internal/cobrax"
+	"github.com/GlennLiu0607/glennctl/rpc/cli"
 	"github.com/spf13/cobra"
 )
 

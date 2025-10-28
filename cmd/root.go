@@ -8,21 +8,21 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/glenn/glennctl/api"
-	"github.com/glenn/glennctl/bug"
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/docker"
-	"github.com/glenn/glennctl/env"
-	"github.com/glenn/glennctl/gateway"
-	"github.com/glenn/glennctl/internal/cobrax"
-	"github.com/glenn/glennctl/internal/version"
-	"github.com/glenn/glennctl/kube"
-	"github.com/glenn/glennctl/migrate"
-	"github.com/glenn/glennctl/model"
-	"github.com/glenn/glennctl/quickstart"
-	"github.com/glenn/glennctl/rpc"
-	"github.com/glenn/glennctl/tpl"
-	"github.com/glenn/glennctl/upgrade"
+	"github.com/GlennLiu0607/glennctl/api"
+	"github.com/GlennLiu0607/glennctl/bug"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/docker"
+	"github.com/GlennLiu0607/glennctl/env"
+	"github.com/GlennLiu0607/glennctl/gateway"
+	"github.com/GlennLiu0607/glennctl/internal/cobrax"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/kube"
+	"github.com/GlennLiu0607/glennctl/migrate"
+	"github.com/GlennLiu0607/glennctl/model"
+	"github.com/GlennLiu0607/glennctl/quickstart"
+	"github.com/GlennLiu0607/glennctl/rpc"
+	"github.com/GlennLiu0607/glennctl/tpl"
+	"github.com/GlennLiu0607/glennctl/upgrade"
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
 	cobracompletefig "github.com/withfig/autocomplete-tools/integrations/cobra"
@@ -36,9 +36,9 @@ const (
 )
 
 var (
-    //go:embed usage.tpl
-    usageTpl string
-    rootCmd  = cobrax.NewCommand("glennctl")
+	//go:embed usage.tpl
+	usageTpl string
+	rootCmd  = cobrax.NewCommand("glennctl")
 )
 
 // Execute executes the given command
@@ -112,10 +112,10 @@ func init() {
 		"%s %s/%s", version.BuildVersion,
 		runtime.GOOS, runtime.GOARCH)
 
-    rootCmd.SetUsageTemplate(usageTpl)
-    // Only support glennctl as main command; provide `glenn` alias for convenience
-    rootCmd.Command.Aliases = []string{"glenn"}
-    rootCmd.AddCommand(api.Cmd, bug.Cmd, docker.Cmd, kube.Cmd, env.Cmd, gateway.Cmd, model.Cmd)
+	rootCmd.SetUsageTemplate(usageTpl)
+	// Only support glennctl as main command; provide `glenn` alias for convenience
+	rootCmd.Command.Aliases = []string{"glenn"}
+	rootCmd.AddCommand(api.Cmd, bug.Cmd, docker.Cmd, kube.Cmd, env.Cmd, gateway.Cmd, model.Cmd)
 	rootCmd.AddCommand(migrate.Cmd, quickstart.Cmd, rpc.Cmd, tpl.Cmd, upgrade.Cmd, config.Cmd)
 	rootCmd.Command.AddCommand(cobracompletefig.CreateCompletionSpecCommand())
 	rootCmd.MustInit()

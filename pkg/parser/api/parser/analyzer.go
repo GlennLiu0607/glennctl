@@ -5,11 +5,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/glenn/glennctl/api/spec"
-	"github.com/glenn/glennctl/pkg/parser/api/ast"
-	"github.com/glenn/glennctl/pkg/parser/api/importstack"
-	"github.com/glenn/glennctl/pkg/parser/api/placeholder"
-	"github.com/glenn/glennctl/pkg/parser/api/token"
+	"github.com/GlennLiu0607/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/ast"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/importstack"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/placeholder"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
 	"github.com/zeromicro/go-zero/core/lang"
 )
 

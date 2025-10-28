@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 var (

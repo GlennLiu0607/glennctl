@@ -7,7 +7,7 @@ import (
 	"os"
 	"reflect"
 
-	apitoken "github.com/glenn/glennctl/pkg/parser/api/token"
+	apitoken "github.com/GlennLiu0607/glennctl/pkg/parser/api/token"
 )
 
 // A FieldFilter may be provided to Fprint to control the output.

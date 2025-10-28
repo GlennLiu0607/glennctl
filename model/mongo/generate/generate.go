@@ -4,13 +4,13 @@ import (
 	"errors"
 	"path/filepath"
 
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/internal/version"
-	"github.com/glenn/glennctl/model/mongo/template"
-	"github.com/glenn/glennctl/util"
-	"github.com/glenn/glennctl/util/format"
-	"github.com/glenn/glennctl/util/pathx"
-	"github.com/glenn/glennctl/util/stringx"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/internal/version"
+	"github.com/GlennLiu0607/glennctl/model/mongo/template"
+	"github.com/GlennLiu0607/glennctl/util"
+	"github.com/GlennLiu0607/glennctl/util/format"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/stringx"
 )
 
 // Context defines the model generation data what they needs

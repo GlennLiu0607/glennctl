@@ -3,7 +3,7 @@ package generator
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 )
 
 const (

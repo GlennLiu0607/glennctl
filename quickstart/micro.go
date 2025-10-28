@@ -1,16 +1,16 @@
 package quickstart
 
 import (
-    _ "embed"
-    "fmt"
-    "os"
-    "path/filepath"
-    "strings"
-    "time"
+	_ "embed"
+	"fmt"
+	"os"
+	"path/filepath"
+	"strings"
+	"time"
 
-    "github.com/glenn/glennctl/util/pathx"
-    "github.com/zeromicro/go-zero/core/logx"
-    "github.com/zeromicro/go-zero/core/service"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/service"
 )
 
 const protoName = "greet.proto"
@@ -34,18 +34,18 @@ func (s serviceImpl) Start() {
 func (s serviceImpl) Stop() {}
 
 func initRPCProto() error {
-    zrpcWorkDir = filepath.Join(projectDir, "rpc")
-    if err := pathx.MkdirIfNotExist(zrpcWorkDir); err != nil {
-        return err
-    }
+	zrpcWorkDir = filepath.Join(projectDir, "rpc")
+	if err := pathx.MkdirIfNotExist(zrpcWorkDir); err != nil {
+		return err
+	}
 
-    protoFilename := filepath.Join(zrpcWorkDir, protoName)
-    // prepend dynamic header to embedded proto content
-    now := time.Now().Format("2006-01-02 15:04:05")
-    winPath := strings.ReplaceAll(filepath.Clean(protoFilename), "/", "\\")
-    header := fmt.Sprintf("/*\n * @Author: GlennLiu <glennliu0607@gmail.com>\n * @Date: %s\n * @LastEditors: Glenn 18322653727@163.com\n * @LastEditTime: %s\n * @FilePath: %s\n * @Description:\n *\n * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.\n */\n\n", now, now, winPath)
-    rpcBytes := []byte(header + protocContent)
-    return os.WriteFile(protoFilename, rpcBytes, 0o666)
+	protoFilename := filepath.Join(zrpcWorkDir, protoName)
+	// prepend dynamic header to embedded proto content
+	now := time.Now().Format("2006-01-02 15:04:05")
+	winPath := strings.ReplaceAll(filepath.Clean(protoFilename), "/", "\\")
+	header := fmt.Sprintf("/*\n * @Author: GlennLiu <glennliu0607@gmail.com>\n * @Date: %s\n * @LastEditors: Glenn 18322653727@163.com\n * @LastEditTime: %s\n * @FilePath: %s\n * @Description:\n *\n * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.\n */\n\n", now, now, winPath)
+	rpcBytes := []byte(header + protocContent)
+	return os.WriteFile(protoFilename, rpcBytes, 0o666)
 }
 
 type micro struct{}

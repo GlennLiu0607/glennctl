@@ -3,7 +3,7 @@ package ktgen
 import (
 	"errors"
 
-	"github.com/glenn/glennctl/api/parser"
+	"github.com/GlennLiu0607/glennctl/api/parser"
 	"github.com/spf13/cobra"
 )
 

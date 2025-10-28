@@ -3,7 +3,7 @@ package env
 import (
 	"fmt"
 
-	"github.com/glenn/glennctl/pkg/env"
+	"github.com/GlennLiu0607/glennctl/pkg/env"
 	"github.com/spf13/cobra"
 )
 

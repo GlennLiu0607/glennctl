@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/glenn/glennctl/pkg/parser/api/parser"
+	"github.com/GlennLiu0607/glennctl/pkg/parser/api/parser"
 )
 
 // File formats the api file.

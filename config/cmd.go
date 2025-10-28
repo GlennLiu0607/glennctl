@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/glenn/glennctl/internal/cobrax"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/internal/cobrax"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/spf13/cobra"
 )
 

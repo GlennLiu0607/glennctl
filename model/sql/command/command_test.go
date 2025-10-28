@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/glenn/glennctl/config"
-	"github.com/glenn/glennctl/model/sql/gen"
-	"github.com/glenn/glennctl/util/pathx"
+	"github.com/GlennLiu0607/glennctl/config"
+	"github.com/GlennLiu0607/glennctl/model/sql/gen"
+	"github.com/GlennLiu0607/glennctl/util/pathx"
 	"github.com/stretchr/testify/assert"
 )
 

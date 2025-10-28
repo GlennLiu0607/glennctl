@@ -3,7 +3,7 @@ package dartgen
 import (
 	"testing"
 
-	"github.com/glenn/glennctl/api/spec"
+	"github.com/GlennLiu0607/glennctl/api/spec"
 )
 
 func Test_getPropertyFromMember(t *testing.T) {
