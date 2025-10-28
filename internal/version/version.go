@@ -2,7 +2,7 @@
  * @Author: GlennLiu <glennliu0607@gmail.com>
  * @Date: 2025-10-28 13:55:08
  * @LastEditors: Glenn 18322653727@163.com
- * @LastEditTime: 2025-10-28 15:37:51
+ * @LastEditTime: 2025-10-28 15:43:11
  * @FilePath: \glennctl\internal\version\version.go
  * @Description:
  *
@@ -16,7 +16,7 @@ import (
 )
 
 // BuildVersion is the version of goctl.
-const BuildVersion = "1.0.3"
+const BuildVersion = "1.0.4"
 
 var tag = map[string]int{"pre-alpha": 0, "alpha": 1, "pre-beta": 2, "beta": 3, "released": 4, "": 5}
 
