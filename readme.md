@@ -141,14 +141,14 @@ glennctl model dm datasource \
 3. 推送代码到远端仓库并打版本标签：
 
 ```
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.0.5
+git push origin v1.0.5
 ```
 
 4. 用户安装方式：
 
 ```
-go install github.com/GlennLiu0607/glennctl@v1.0.0
+go install github.com/GlennLiu0607/glennctl@v1.0.5
 ```
 
 5. 验证：
