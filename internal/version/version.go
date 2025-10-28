@@ -1,3 +1,13 @@
+/*
+ * @Author: GlennLiu <glennliu0607@gmail.com>
+ * @Date: 2025-10-28 13:55:08
+ * @LastEditors: Glenn 18322653727@163.com
+ * @LastEditTime: 2025-10-28 15:37:51
+ * @FilePath: \glennctl\internal\version\version.go
+ * @Description:
+ *
+ * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.
+ */
 package version
 
 import (
@@ -6,7 +16,7 @@ import (
 )
 
 // BuildVersion is the version of goctl.
-const BuildVersion = "1.9.2"
+const BuildVersion = "1.0.3"
 
 var tag = map[string]int{"pre-alpha": 0, "alpha": 1, "pre-beta": 2, "beta": 3, "released": 4, "": 5}
 
