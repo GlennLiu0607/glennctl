@@ -1,4 +1,4 @@
-module github.com/glenn/glennctl
+module github.com/GlennLiu0607/glennctl
 
 go 1.21
 
@@ -22,8 +22,6 @@ require (
 	google.golang.org/protobuf v1.36.5
 	gopkg.in/yaml.v2 v2.4.0
 )
-
-replace github.com/redis/go-redis/v9 => github.com/redis/go-redis/v9 v9.14.0
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
@@ -74,7 +72,7 @@ require (
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
-	github.com/redis/go-redis/v9 v9.15.0 // indirect
+	github.com/redis/go-redis/v9 v9.14.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect

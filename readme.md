@@ -9,7 +9,7 @@ glennctl 是基于 go-zero 增强的代码生成与脚手架工具，统一以 `
 - 安装最新版本：
 
 ```
-go install github.com/glenn/glennctl@latest
+go install github.com/GlennLiu0607/glennctl@latest
 ```
 
 - 验证安装：
@@ -107,25 +107,26 @@ glennctl template update -c tdengine
 
 ## 发布说明
 
-1. 确保 `go.mod` 模块路径为 `github.com/glenn/glennctl`；
-2. 推送代码到远端仓库并打版本标签：
+1. 移除 `go.mod` 中的 `replace` 指令（发布模块不允许包含会改变解析的 replace）。
+2. 模块路径必须与仓库地址一致：
+   - 若发布到 `github.com/GlennLiu0607/glennctl`，请将 `go.mod` 第一行修改为 `module github.com/GlennLiu0607/glennctl`，并统一更新项目内的 import 前缀为该模块路径；
+   - 若保持 `github.com/GlennLiu0607/glennctl`，则仓库地址需与之匹配，安装时使用该路径。
+3. 推送代码到远端仓库并打版本标签：
 
 ```
 git tag v1.0.0
 git push origin v1.0.0
 ```
 
-3. 用户安装方式：
+4. 用户安装方式：
 
 ```
-go install github.com/glenn/glennctl@v1.0.0
+go install github.com/GlennLiu0607/glennctl@v1.0.0
 ```
 
-4. 验证：
+5. 验证：
 
 ```
 glennctl version
 glennctl -h
 ```
-
-如需自动发布二进制，可添加 GitHub Actions（例如使用 `goreleaser`），但通过 `go install` 即可满足大多数使用场景。
