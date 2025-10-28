@@ -1,6 +1,3 @@
-// Code scaffolded by goctl. Safe to edit.
-// goctl {{.version}}
-
 /*
  * @Author: GlennLiu <glennliu0607@gmail.com>
  * @Date: {{.Date}}
@@ -8,7 +5,7 @@
  * @LastEditTime: {{.LastEditTime}}
  * @FilePath: {{.FilePath}}
  * @Description:
- *
+ *		glennctl {{.version}}
  * Copyright (c) 2025 by 天津晟源士兴科技有限公司, All Rights Reserved.
  */
 

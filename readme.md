@@ -157,3 +157,7 @@ go install github.com/GlennLiu0607/glennctl@v1.0.0
 glennctl version
 glennctl -h
 ```
+
+6. 注意：
+    每次发布前必须修改 `internal/version/version.go` 中的 `const BuildVersion = "1.0.3"` 为当前要发布的tag版本，不然 glennctl -v/--version 显示有问题
+    更新本地版本直接 `go install github.com/GlennLiu0607/glennctl@v1.0.4` 或 `go install github.com/GlennLiu0607/glennctl@latest` 即可
