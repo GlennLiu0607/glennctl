@@ -1,24 +1,27 @@
 package command
 
 import (
-	"errors"
-	"path/filepath"
-	"strings"
+    "errors"
+    "path/filepath"
+    "strings"
 
-	"github.com/GlennLiu0607/glennctl/config"
-	"github.com/GlennLiu0607/glennctl/model/sql/command/migrationnotes"
-	"github.com/GlennLiu0607/glennctl/model/sql/gen"
-	"github.com/GlennLiu0607/glennctl/model/sql/model"
-	"github.com/GlennLiu0607/glennctl/model/sql/util"
-	file "github.com/GlennLiu0607/glennctl/util"
-	"github.com/GlennLiu0607/glennctl/util/console"
-	"github.com/GlennLiu0607/glennctl/util/pathx"
-	"github.com/go-sql-driver/mysql"
-	"github.com/spf13/cobra"
-	"github.com/zeromicro/go-zero/core/collection"
-	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/zeromicro/go-zero/core/stores/postgres"
-	"github.com/zeromicro/go-zero/core/stores/sqlx"
+    "github.com/GlennLiu0607/glennctl/config"
+    "github.com/GlennLiu0607/glennctl/model/sql/command/migrationnotes"
+    "github.com/GlennLiu0607/glennctl/model/sql/gen"
+    "github.com/GlennLiu0607/glennctl/model/sql/model"
+    "github.com/GlennLiu0607/glennctl/model/sql/util"
+    file "github.com/GlennLiu0607/glennctl/util"
+    "github.com/GlennLiu0607/glennctl/util/console"
+    "github.com/GlennLiu0607/glennctl/util/pathx"
+    "github.com/go-sql-driver/mysql"
+    "github.com/spf13/cobra"
+    "github.com/zeromicro/go-zero/core/collection"
+    "github.com/zeromicro/go-zero/core/logx"
+    "github.com/zeromicro/go-zero/core/stores/postgres"
+    "github.com/zeromicro/go-zero/core/stores/sqlx"
+    
+    dm "github.com/sineycoder/gorm-dm"
+    "gorm.io/gorm"
 )
 
 var (
@@ -412,4 +415,89 @@ func fromPostgreSqlDataSource(arg pgDataSourceArg) error {
 	}
 
 	return generator.StartFromInformationSchema(matchTables, arg.cache, arg.strict)
+}
+
+// DamengDataSource generates model code from Dameng DM8 datasource
+func DamengDataSource(_ *cobra.Command, _ []string) error {
+    migrationnotes.BeforeCommands(VarStringDir, VarStringStyle)
+    url := strings.TrimSpace(VarStringURL)
+    dir := strings.TrimSpace(VarStringDir)
+    cache := VarBoolCache
+    idea := VarBoolIdea
+    style := VarStringStyle
+    schema := VarStringSchema
+    home := VarStringHome
+    remote := VarStringRemote
+    branch := VarStringBranch
+    if len(remote) > 0 {
+        repo, _ := file.CloneIntoGitHome(remote, branch)
+        if len(repo) > 0 {
+            home = repo
+        }
+    }
+    if len(home) > 0 {
+        pathx.RegisterGoctlHome(home)
+    }
+
+    if len(schema) == 0 {
+        schema = "SYSDBA"
+    }
+
+    log := console.NewConsole(idea)
+    if len(url) == 0 {
+        log.Error("%v", "expected data source of dameng, but nothing found")
+        return nil
+    }
+    if len(VarStringSliceTable) == 0 {
+        log.Error("%v", "expected table or table globbing patterns, but nothing found")
+        return nil
+    }
+
+    patterns := parseTableList(VarStringSliceTable)
+    cfg, err := config.NewConfig(style)
+    if err != nil {
+        return err
+    }
+
+    // Open DM8 via GORM dialector; url format: dm://user:pass@host:port?schema=SYSDBA
+    db, err := gorm.Open(dm.Open(url), &gorm.Config{})
+    if err != nil {
+        return err
+    }
+
+    im := model.NewDamengModel(db)
+    tables, err := im.GetAllTables(schema)
+    if err != nil {
+        return err
+    }
+
+    matchTables := make(map[string]*model.Table)
+    for _, item := range tables {
+        if !patterns.Match(item) {
+            continue
+        }
+
+        columnData, err := im.FindColumns(schema, item)
+        if err != nil {
+            return err
+        }
+
+        table, err := columnData.Convert()
+        if err != nil {
+            return err
+        }
+
+        matchTables[item] = table
+    }
+
+    if len(matchTables) == 0 {
+        return errors.New("no tables matched")
+    }
+
+    generator, err := gen.NewDefaultGenerator(VarStringCachePrefix, dir, cfg, gen.WithConsoleOption(log), gen.WithIgnoreColumns(mergeColumns(VarStringSliceIgnoreColumns)))
+    if err != nil {
+        return err
+    }
+
+    return generator.StartFromInformationSchema(matchTables, cache, VarBoolStrict)
 }

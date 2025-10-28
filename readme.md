@@ -97,6 +97,33 @@ glennctl template update -c mongo
 glennctl template update -c tdengine
 ```
 
+### DM8 模型生成（新增）
+
+- 现已支持达梦 DM8 数据源模型生成，命令结构与 MySQL/PostgreSQL 一致：
+
+```
+glennctl model dm datasource \
+  --url "dm://USER:PASSWORD@127.0.0.1:5236?autoCommit=true" \
+  --schema SYSDBA \
+  --table "*" \
+  --dir ./model \
+  --style go_zero
+```
+
+- 关键参数说明：
+  - `--url` DM8 连接串，示例：`dm://SYSDBA:SYSDBA@127.0.0.1:5236?autoCommit=true`
+  - `--schema` 指定所有者/模式（默认 `SYSDBA`），用于过滤 `ALL_*` 视图
+  - `--table` 支持通配（如：`user*`, `ORDER_*`），多个用逗号分隔
+  - 其余选项与 MySQL/PostgreSQL 一致：`--dir` 输出目录、`--style` 命名风格、`--cache` 是否生成缓存、`--strict` 严格模式
+  - 可通过命令组持久化参数：
+    - `--ignore-columns` 默认忽略时间字段：`create_at, created_at, create_time, update_at, updated_at, update_time`
+    - `--prefix` 缓存前缀，默认 `cache`
+
+- 注意事项：
+  - DM8 连接示例亦可使用构造函数形式（等价）：`dm.BuildDsn(host, port, user, password, params)`，例如生成 `dm://user:password@127.0.0.1:5236?autoCommit=true`
+  - `--schema` 与连接串无强耦合，主要用于元数据检索（`ALL_TABLES/ALL_TAB_COLUMNS/ALL_INDEXES` 等），请与数据库账号具备的可见对象一致
+  - 表筛选在工具侧完成，连接只需指向可访问的实例地址
+
 ## 常用选项说明
 
 - `--home` 指定模板根目录

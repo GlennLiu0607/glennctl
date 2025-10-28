@@ -181,6 +181,7 @@ var commonMysqlDataTypeMapString = map[string]string{
 	"_char":           "pq.StringArray",
 	"character":       "string",
 	"varchar":         "string",
+	"varchar2":        "string",
 	"_varchar":        "pq.StringArray",
 	"binary":          "string",
 	"bytea":           "string",
@@ -200,6 +201,9 @@ var commonMysqlDataTypeMapString = map[string]string{
 	"mediumblob":      "string",
 	"tinyblob":        "string",
 	"ltree":           "[]byte",
+	// Dameng/Oracle compatible types
+	"number":          "float64",
+	"nvarchar2":       "string",
 }
 
 // ConvertDataType converts mysql column type into golang type
